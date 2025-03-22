@@ -1,9 +1,8 @@
-/* Общие стили */
 body {
     font-family: 'Orbitron', sans-serif;
-    text-align: center;
     margin: 0;
     padding: 0;
+    text-align: center;
     background: url('https://wallpapers.com/images/hd/sports-car-neon-city-4k-ojzffavrtulqvkmv.jpg') no-repeat center center fixed;
     background-size: cover;
     color: white;
@@ -19,16 +18,13 @@ body {
     animation: fadeIn 2s ease-out;
 }
 
-.welcome-text {
+.welcome-screen h1 {
     font-size: 36px;
-    margin-bottom: 20px;
-    animation: fadeIn 2s ease-out;
 }
 
-.intro-text {
+.welcome-screen p {
     font-size: 20px;
-    margin-bottom: 30px;
-    animation: fadeIn 2s ease-out;
+    margin-bottom: 20px;
 }
 
 button {
@@ -60,7 +56,7 @@ button:hover {
 /* Основное содержимое */
 .main-content {
     padding: 20px;
-    animation: fadeIn 3s ease-out;
+    animation: fadeIn 2s ease-out;
 }
 
 /* Навигация */
@@ -106,7 +102,6 @@ button:hover {
     text-align: left;
 }
 
-/* Стили для контента */
 h2, h3 {
     font-size: 24px;
     margin-bottom: 10px;
@@ -115,10 +110,4 @@ h2, h3 {
 p {
     font-size: 18px;
     margin: 5px 0;
-}
-
-/* Для фона */
-body {
-    background: url('https://wallpapers.com/images/hd/sports-car-neon-city-4k-ojzffavrtulqvkmv.jpg') no-repeat center center fixed;
-    background-size: cover;
 }
