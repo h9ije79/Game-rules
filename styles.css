@@ -1,34 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
 body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Russo One', sans-serif;
     background: url('https://source.unsplash.com/1600x900/?sports-car') no-repeat center center fixed;
     background-size: cover;
     color: white;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    flex-direction: column;
 }
 
-.container {
-    background: rgba(0, 0, 0, 0.7);
-    padding: 20px;
-    border-radius: 10px;
-    margin-top: 50px;
+h1, p {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeIn 1.5s forwards ease-out;
 }
 
-h1 {
-    font-family: 'Arial', sans-serif;
-    font-weight: bold;
+#main-content {
+    transition: opacity 1s ease-in-out;
 }
 
-.rule-category {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 15px;
-    margin: 10px 0;
-    border-radius: 8px;
+.hidden {
+    opacity: 0;
+    display: none;
 }
 
-.buttons a {
-    margin: 10px;
+#welcome-screen {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 30px;
+    border-radius: 15px;
+    transition: all 1s ease-in-out;
+}
+
+#welcome-screen button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 20px;
+    background: red;
+    border: none;
+    color: white;
+    cursor: pointer;
     transition: 0.3s;
+    border-radius: 10px;
 }
 
-.buttons a:hover {
+#welcome-screen button:hover {
+    background: darkred;
     transform: scale(1.1);
+}
+
+.hide {
+    opacity: 0;
+    transform: scale(0.8);
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    background: #ff5733;
+    border-radius: 10px;
+    transition: all 0.3s;
+}
+
+.btn:hover {
+    background: #c70039;
+    transform: scale(1.1);
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
 }
