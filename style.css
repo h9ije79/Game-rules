@@ -1,14 +1,15 @@
 body {
-    font-family: Arial, sans-serif;
-    background-image: url('background.jpg');
+    font-family: 'Poppins', sans-serif;
+    background: url('background.jpg') no-repeat center center fixed;
     background-size: cover;
     color: white;
     text-align: center;
     padding: 20px;
+    margin: 0;
 }
 
 .welcome-screen {
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.8);
@@ -16,12 +17,30 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    transition: opacity 1s ease-in-out;
 }
 
 button {
-    padding: 10px 20px;
-    font-size: 18px;
+    padding: 12px 25px;
+    font-size: 20px;
+    font-weight: bold;
+    background: #ff5500;
+    border: none;
+    border-radius: 5px;
+    color: white;
     cursor: pointer;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+}
+
+button:hover {
+    background: #ff7700;
+    transform: scale(1.05);
+}
+
+.main-content {
+    display: none;
+    padding-top: 50px;
+    animation: fadeIn 1s ease-in-out;
 }
 
 .rules-container {
@@ -30,11 +49,18 @@ button {
     border-radius: 10px;
     display: inline-block;
     text-align: left;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .rule {
     margin-bottom: 15px;
-    padding: 10px;
+    padding: 15px;
     background: rgba(255, 255, 255, 0.2);
     border-radius: 5px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
