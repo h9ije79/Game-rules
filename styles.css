@@ -1,81 +1,91 @@
-@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
 
 body {
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
-    font-family: 'Russo One', sans-serif;
-    background: url('https://source.unsplash.com/1600x900/?sports-car') no-repeat center center fixed;
-    background-size: cover;
-    color: white;
-    text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
-    flex-direction: column;
-}
-
-h1, p {
-    opacity: 0;
-    transform: translateY(-20px);
-    animation: fadeIn 1.5s forwards ease-out;
-}
-
-#main-content {
-    transition: opacity 1s ease-in-out;
-}
-
-.hidden {
-    opacity: 0;
-    display: none;
-}
-
-#welcome-screen {
-    background: rgba(0, 0, 0, 0.8);
-    padding: 30px;
-    border-radius: 15px;
-    transition: all 1s ease-in-out;
-}
-
-#welcome-screen button {
-    margin-top: 15px;
-    padding: 10px 20px;
-    font-size: 20px;
-    background: red;
-    border: none;
+    background: url('background.jpg') no-repeat center center/cover;
     color: white;
-    cursor: pointer;
-    transition: 0.3s;
+    text-align: center;
+}
+
+/* Стиль для приветственной страницы */
+.welcome-container {
+    max-width: 600px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
     border-radius: 10px;
+    animation: fadeIn 1.5s ease-in-out;
 }
 
-#welcome-screen button:hover {
-    background: darkred;
-    transform: scale(1.1);
+h1 {
+    font-weight: 600;
+    font-size: 28px;
+    margin-bottom: 10px;
 }
 
-.hide {
-    opacity: 0;
-    transform: scale(0.8);
-}
-
-.btn {
-    display: inline-block;
-    padding: 12px 25px;
+p {
     font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.continue-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #ff5733;
     color: white;
     text-decoration: none;
-    background: #ff5733;
-    border-radius: 10px;
-    transition: all 0.3s;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: transform 0.3s, background 0.3s;
 }
 
-.btn:hover {
-    background: #c70039;
+.continue-btn:hover {
     transform: scale(1.1);
+    background: #ff2e00;
+}
+
+/* Стиль для меню */
+.menu-container {
+    max-width: 600px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+}
+
+.menu-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.menu-btn {
+    display: block;
+    padding: 10px;
+    background: #008CBA;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.menu-btn:hover {
+    transform: scale(1.1);
+    background: #005f8c;
+}
+
+/* Анимации */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out forwards;
 }
 
 @keyframes fadeIn {
-    0% { opacity: 0; transform: translateY(-20px); }
-    100% { opacity: 1; transform: translateY(0); }
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
