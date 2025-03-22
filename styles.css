@@ -1,58 +1,79 @@
 body {
     font-family: 'Orbitron', sans-serif;
     text-align: center;
-    background: url('https://wallpapers.com/images/hd/sports-car-at-night-vg7spzjlh9kfq0fc.jpg') no-repeat center center/cover;
+    background: url('https://wallpapers.com/images/hd/sports-car-neon-city-4k-ojzffavrtulqvkmv.jpg') no-repeat center center fixed;
+    background-size: cover;
     color: white;
     margin: 0;
     padding: 0;
 }
 
-.welcome-screen {
-    margin-top: 20%;
-    animation: fadeIn 2s ease-in-out;
-    background: rgba(0, 0, 0, 0.7);
-    padding: 20px;
-    border-radius: 10px;
-    display: inline-block;
+h1, h2, h3, p {
+    margin: 10px 0;
 }
 
 button {
     padding: 10px 20px;
     font-size: 18px;
-    cursor: pointer;
-    background: #ff0000;
+    background-color: #222;
     color: white;
     border: none;
-    border-radius: 5px;
+    cursor: pointer;
     transition: 0.3s;
 }
 
 button:hover {
-    background: #cc0000;
-}
-
-.main-content {
-    margin-top: 20px;
-    background: rgba(0, 0, 0, 0.8);
-    padding: 20px;
-    border-radius: 10px;
-    display: inline-block;
-}
-
-nav {
-    margin-bottom: 20px;
-}
-
-.tab-btn, .sub-tab-btn {
-    background: #ff5500;
-    margin: 10px;
+    background-color: #444;
 }
 
 .hidden {
     display: none;
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+.welcome-screen {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.welcome-screen h1 {
+    font-size: 36px;
+}
+
+.welcome-screen p {
+    font-size: 20px;
+}
+
+.main-content {
+    padding: 20px;
+}
+
+nav {
+    margin-bottom: 20px;
+}
+
+.tab-btn {
+    font-size: 20px;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.sub-tab-btn {
+    font-size: 18px;
+    margin: 10px;
+    background-color: #444;
+    padding: 8px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.sub-tab-content {
+    text-align: left;
+    margin-top: 20px;
 }
