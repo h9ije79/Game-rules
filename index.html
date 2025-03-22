@@ -3,49 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Приветствие</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #1a1a1a;
-            color: white;
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-        .button {
-            background-color: #008CBA;
-            border: none;
-            color: white;
-            padding: 15px 32px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 20px;
-            margin-top: 20px;
-            cursor: pointer;
-            border-radius: 10px;
-            transition: background 0.3s ease-in-out;
-        }
-        .button:hover {
-            background-color: #005f73;
-        }
-    </style>
+    <title>Добро пожаловать</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
+    <div class="welcome-screen">
         <h1>Добро пожаловать!</h1>
-        <p>Выберите раздел:</p>
-        <a href="rules.html" class="button">Правила</a>
-        <a href="discord.html" class="button">Правила Discord</a>
-        <a href="admin.html" class="button">Администрация</a>
+        <button onclick="enterSite()">Продолжить</button>
+    </div>
+    <script>
+        function enterSite() {
+            document.querySelector('.welcome-screen').style.display = 'none';
+            document.querySelector('.main-content').style.display = 'block';
+        }
+    </script>
+    <div class="main-content" style="display: none;">
+        <h2>Главная страница</h2>
+        <a href="rules.html">Правила</a>
     </div>
 </body>
 </html>
