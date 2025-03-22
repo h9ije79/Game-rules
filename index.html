@@ -3,37 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Главная</title>
+    <title>Добро пожаловать</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="welcome-page">
 
-<div id="welcome-screen">
-    <h1>Доброго времени суток, дорогой игрок!</h1>
-    <button onclick="hideWelcome()">Продолжить</button>
-</div>
-
-<div id="main-content" class="hidden">
-    <h1>Добро пожаловать!</h1>
-    <p>Вы можете узнать правила игры, Discord-сервера и список администрации.</p>
-    <div class="buttons">
-        <a href="rules.html" class="btn">Правила игры</a>
-        <a href="discord.html" class="btn">Правила Discord</a>
-        <a href="admins.html" class="btn">Администрация</a>
+    <div class="welcome-container">
+        <h1 class="fade-in">Доброго времени суток, дорогой игрок!</h1>
+        <p class="fade-in">Здесь вы узнаете правила игры, Discord-сервера и список администрации.</p>
+        <a href="home.html" class="continue-btn fade-in">Продолжить</a>
     </div>
-</div>
-
-<script>
-    function hideWelcome() {
-        document.getElementById("welcome-screen").classList.add("hide");
-        setTimeout(() => {
-            document.getElementById("welcome-screen").style.display = "none";
-            document.getElementById("main-content").classList.remove("hidden");
-        }, 1000);
-    }
-</script>
 
 </body>
 </html>
